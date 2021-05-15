@@ -8,23 +8,23 @@
 function CheckService(val){
  var element1=document.getElementById('word1');
  var element2=document.getElementById('word2');
+ var element3=dcoument.getElementById('helptext');
  if(val=='similarity'){
    element1.style.display='block';
-   element2.style.display='block';}
+   element2.style.display='block';
+   element3.style.display='block';}
  else{
    element1.style.display='none';
-   element2.style.display='none';}
+   element2.style.display='none';
+   element3.style.display='none';
+
+ }
 }
 
 </script>
 </head>
 <body>
-<div>
-    <h2>Services Description</h2>
-    <ul>
-        <li> <b>Similarity: </b>  </li>
-    </ul>
-</div>
+
 <form action="/services" method = "POST" id="nlpinput">
     <label for="service">Choose a service:</label>
 <select required id="service" name="service" onchange='CheckService(this.value);' >
@@ -33,12 +33,12 @@ function CheckService(val){
     <option value="word_cloud">word_cloud</option>
     <option value="pos_tagging">POS_Tagging</option>
     <option value="subjectivity">subjectivity</option>
-    <option value="all_services">all_services</option>
     <option value="summarization">summarization</option>
 </select>
     <p><textarea required rows="4" cols="50" name="content" form="nlpinput">Born and raised in Queens, New York City, Trump attended Fordham University and the University of Pennsylvania, graduating with a bachelor's degree in 1968. He became the president of his father Fred Trump's real estate business in 1971 and renamed it to The Trump Organization. Trump expanded the company's operations to building and renovating skyscrapers, hotels, casinos, and golf courses. He later started various side ventures, mostly by licensing his name. Trump and his businesses have been involved in more than 4,000 state and federal legal actions, including six bankruptcies. He owned the Miss Universe brand of beauty pageants from 1996 to 2015. From 2003 to 2015 he co-produced and hosted the reality television series The Apprentice.
 
 </textarea></p>
+    <p style='display:none;' id="helptext" > Add two opposite terms to compare. For example, good and bad. </p>
     <p><input style='display:none;' type="text" name = "word1" value="good" id="word1" /></p>
     <p><input style='display:none;' type="text" name = "word2" value="bad" id="word2" /></p>
     <p><input type = "submit" value = "submit" /></p>
