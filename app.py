@@ -18,7 +18,7 @@ header_text = '''
 instructions = '''
     <p><a href="/services">Check out the NLP services!</a></p>\n'''
 home_link = '<p><a href="/">Back</a></p>\n'
-footer_text = '<p><b>Made by Akshat Goel, Giovanni Scalzotto, Francesco Forner, Kevin Shah</b></p> </body>\n</html>'
+footer_text = '</body>\n</html>'
 
 @app.route('/services', methods=['POST', 'GET'])
 def services():
